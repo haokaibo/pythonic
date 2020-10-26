@@ -16,15 +16,39 @@ class Practice1Test(TestCase):
         print('hello')
         print('world')
 
-        x=1
+        x = 1
         if x == 1:
             print('hello, world')
 
-        cond1 = x==1
-        cond2 = 1==1
+        cond1 = x == 1
+        cond2 = 1 == 1
         if cond1 and cond2:
             print('Great world.')
 
     def test_iterate_array_with_index(self):
         for i, item in enumerate(range(10)):
             print(f'{i}-->{item}')
+
+    def test_deserialize_array(self):
+        a, *rest = [1, 2, 3]
+        print(f'a={a}, rest={rest}')
+
+        a, *middle, c = [1, 2, 3, 4]
+        print(f'a={a}, middle={middle}, c={c}')
+
+    def test_join_str(self):
+        print(''.join(['a', 'b', 'c']))
+
+    def test_true_condition_judgement(self):
+        empty_str = ''
+        empty_arr = []
+        empty_dic = {}
+
+        if not empty_str:
+            print(f'empty_str is False.')
+
+        if not empty_arr:
+            print(f'empty_arr is False.')
+
+        if not empty_dic:
+            print(f'empty_dic is False.')
