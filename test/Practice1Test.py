@@ -52,3 +52,9 @@ class Practice1Test(TestCase):
 
         if not empty_dic:
             print(f'empty_dic is False.')
+
+    def test_get_value_from_dic(self):
+        d = {'hello': 'world'}
+
+        print(d.get('hello', 'default_value'))
+        print(d.get('not exist key', 'default_value'))
